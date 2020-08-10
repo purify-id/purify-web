@@ -26,8 +26,8 @@ export default {
       header: (): Promise<any> => import("./header.vue"),
       footer: (): Promise<any> => import("./footer.vue"),
     },
-    logo: require("./img/logo-zeno.svg"),
-    logoInverse: require("./img/logo-zeno-inverse.svg"),
+    logo: require("./img/logo-purify.svg"),
+    logoInverse: require("./img/logo-purify-inverse.svg"),
     nav: [
       {
         _item: "home",
@@ -69,8 +69,8 @@ export default {
      * Copy for the call to action on the home page, pricing page, and about page.
      */
     cta: {
-      title: "Get better results with Zeno",
-      content: `Save time and start with a solid foundation, then customize. <i class="fas fa-rocket"></i>`,
+      title: "Deliver best experience with us",
+      content: `Your customer worth getting their best experience. Get your best services with our industry leading expert <i class="fas fa-rocket"></i>`,
       buttons: [
         {
           _item: "contact",
@@ -98,7 +98,7 @@ export default {
           _item: "contact",
           link: "/contact",
           text: "Learn More",
-          classes: "btn mr-4 text-green-100 bg-purple-500 hover:bg-green-700",
+          classes: "btn mr-4 text-purple-100 bg-purple-500 hover:bg-purple-600",
         },
         {
           _item: "pricing",
@@ -111,7 +111,7 @@ export default {
       figure: require("./img/brainstorming.svg"),
     },
     logos: {
-      title: "Working with the following clouds:",
+      title: "Working with the following technologies:",
       list: [
         {
           _item: "aws",
@@ -179,9 +179,9 @@ export default {
     },
     section4: {
       id: "software-as-a-service",
-      pretitle: "Software-as-a-Service",
-      title: "The last software you'll need!",
-      content: `<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>`,
+      pretitle: "Our Vision",
+      title: "Prime Business Solution",
+      content: `<p>Purify established in early January 2020. We're aiming to simplify business process, without compromising on technology. Besides any technical skills we had, our team provide digital branding solution to support our local businesses.</p>`,
       buttons: [
         {
           _item: "contact",
@@ -195,20 +195,23 @@ export default {
     },
     section5: {
       id: "software-as-code",
-      pretitle: "Open Source",
-      title: "Product A + Product B = ",
-      titleIcon: require("./img/custom-heart.svg"),
+      pretitle: "Solutions",
+      title: "What we offer",
+      titleIcon: "",
       items: [
         {
-          _item: "producta",
-          image: require("./img/logo-producta.svg"),
-          alt: "Product A",
+          image: require("./img/web-icon.svg"),
+          title: "Web Development",
           content: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.`,
         },
         {
-          _item: "productb",
-          image: require("./img/logo-productb.svg"),
-          alt: "Product B",
+          image: require("./img/mobile-icon.svg"),
+          title: "Mobile App Development",
+          content: `Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.`,
+        },
+        {
+          image: require("./img/stack-icon.svg"),
+          title: "IT Solution",
           content: `Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.`,
         },
       ],
@@ -216,27 +219,13 @@ export default {
       syntax: (): Promise<any> => import("./el/figure-infrastructure.vue"),
     },
     testimonials: {
-      pretitle: "Success Stories",
-      title: "Our customers love what we do!",
-      items: [
-        {
-          _item: "testimonial_1",
-          content: `@Zeno designed and fully managed our migration to #productA and on-premises enterprise deployments. They've been absolutely fantastic!`,
-          image: require("./img/member4.jpg"),
-          author: "Kate Brennan",
-          info: "CEO, Lorem ipsum",
-        },
-        {
-          _item: "testimonial_2",
-          content: `@Zeno designed and fully managed our migration to #productB and on-premises enterprise deployments. They've been absolutely fantastic!`,
-          image: require("./img/member3.jpg"),
-          author: "Sebastian Hodges",
-          info: "CEO, SedLaudantium",
-        },
-      ],
+      pretitle: "Pricing Plan",
+      title: "Pricing that scales with your business needs",
+      description:
+        "We provide a starter pricing plan for you who just jump in and start doing business. You can easily start your business and have a website that align with your brand identity. We also provide custom app solution for growing SME's to track their inventory, maintain their customer retention, and sales management.",
     },
     meta: {
-      title: "Factor Zeno Theme",
+      title: "Purify",
       description:
         "Zeno is a minimalist theme suited for the needs of IT companies and tech startups. Styles are powered by Tailwind, a low-level CSS framework.",
       image: require("./img/logo-zeno.jpg"),
@@ -371,23 +360,23 @@ export default {
         classes: "md:mt-6",
         name: "Starter",
         description:
-          "All the basics for businesses that are just getting started.",
-        price: `$199 <span class="text-base">per month</span>`,
+          "We take care your website needs and make sure you deliver ",
+        price: `Rp 249k <span class="text-base">per month</span>`,
         list: [
           {
-            content: "At vero eos et accusamus",
+            content: "Visitor Analytics App",
           },
           {
-            content: "Et iusto odio dignissimos",
+            content: "Automated Order Form",
           },
           {
-            content: `Ducimus qui blanditiis`,
+            content: "WhatsApp Integration",
           },
           {
-            content: "Lorem ipsum dolor sit",
+            content: "SSL Certificate",
           },
           {
-            content: "Omnis iste natus error sit",
+            content: "Lovely Documentation",
           },
         ],
         buttonLink: "/contact",

@@ -3,6 +3,9 @@ module.exports = {
   purge: false,
   theme: {
     extend: {
+      screens: {
+        xxl: "2560px",
+      },
       fontFamily: {
         sans: ["Maven Pro", "sans-serif"],
       },
@@ -30,15 +33,15 @@ module.exports = {
           900: "#1a202c",
         },
         purple: {
-          100: "#F0E8FC",
-          200: "#D9C5F7",
-          300: "#C1A1F1",
-          400: "#935BE7",
-          500: "var(--color-primary, #6515dd)",
-          600: "#5B13C7",
-          700: "#3D0D85",
-          800: "#2D0963",
-          900: "#0B092E",
+          100: "#E9F0EF",
+          200: "#C8DAD8",
+          300: "#A6C3C0",
+          400: "#649790",
+          500: "var(--color-primary, #216A61)",
+          600: "#1E5F57",
+          700: "#14403A",
+          800: "#0F302C",
+          900: "#0A201D",
         },
       },
     },
