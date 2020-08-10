@@ -40,7 +40,7 @@
       </div>
     </section>
 
-    <section
+    <!-- <section
       v-if="setting('home.section3')"
       :id="setting('home.section3.id')"
       class="section-3 relative bg-cover bg-center bg-purple-900 px-8 py-16"
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section
       v-if="setting('home.section4')"
@@ -80,7 +80,11 @@
       <div
         class="max-w-6xl mx-auto flex flex-col py-8 md:flex-row lg:pt-12 lg:pb-24"
       >
-        <div class="flex flex-col p-8 justify-center md:w-3/5">
+        <component
+          :is="setting('home.section4.figure')"
+          class="flex p-8 md:w-3/5"
+        />
+        <div class="flex flex-col p-8 justify-center md:w-2/5">
           <h3 v-if="section4Pretitle" class="custom-uppercase text-purple-500">
             {{ section4Pretitle }}
           </h3>
@@ -108,10 +112,6 @@
             </template>
           </div>
         </div>
-        <component
-          :is="setting('home.section4.figure')"
-          class="flex p-8 md:w-2/5"
-        />
       </div>
     </section>
 
@@ -153,7 +153,19 @@
                 :key="index"
                 class="mb-10 p-10 transition-all rounded bg-white custom-card-left md:mb-20"
               >
-                <img v-if="item.image" :src="item.image" :alt="item.alt" />
+                <div class="flex content-center">
+                  <img
+                    v-if="item.image"
+                    :src="item.image"
+                    :alt="item.alt"
+                    class="mt-4 h-10 mr-4"
+                  />
+                  <div
+                    v-if="item.title"
+                    v-formatted-text="item.title"
+                    class="text-2xl mt-4 leading-none font-bold text-black lg:text-4xl"
+                  />
+                </div>
                 <div
                   v-if="item.content"
                   v-formatted-text="item.content"
@@ -180,54 +192,72 @@
       :id="setting('home.testimonials.id')"
       class="section-6"
     >
-      <div class="max-w-6xl mx-auto px-8 py-16 lg:py-24">
-        <div class="max-w-xs mx-auto">
-          <h3
-            v-if="section6Pretitle"
-            class="custom-uppercase text-center text-purple-500"
-          >
+      <div
+        class="flex flex-col md:flex-row max-w-6xl mx-auto px-8 py-16 lg:py-24"
+      >
+        <div class="max-w-lg md:mr-auto">
+          <h3 v-if="section6Pretitle" class="custom-uppercase text-purple-500">
             {{ section6Pretitle }}
           </h3>
           <h1
             v-if="section6Title"
-            class="mt-2 text-normal tracking-tight leading-tight text-3xl text-center text-purple-900 lg:text-4xl"
+            class="mt-2 text-normal tracking-tight leading-tight text-3xl text-purple-900 lg:text-4xl"
           >
             {{ section6Title }}
           </h1>
+          <p class="mt-3">
+            {{ section6Description }}
+          </p>
         </div>
-        <div
-          v-if="section6Items"
-          class="flex flex-col text-base mt-6 md:flex-row md:flex-wrap lg:text-xl"
-        >
-          <template v-for="(item, index) in section6Items">
-            <div :key="index" class="w-full p-8 md:w-1/2">
-              <blockquote v-if="item.content" class="relative inline-block">
-                <span
-                  class="absolute text-6xl text-purple-600 font-serif -ml-10 -mt-6"
-                  >&ldquo;</span
+
+        <template v-for="(item, index) in setting('pricing.packages')">
+          <div
+            v-if="index == 0"
+            :key="index"
+            class="w-full mt-12 md:-mt-10 md:w-4/12"
+          >
+            <div
+              class="rounded bg-white shadow transition-all hover:shadow-lg hover:-mt-8 md:mx-4"
+              :class="item.classes"
+            >
+              <div class="px-8 py-4">
+                <h1
+                  v-if="item.name"
+                  class="font-normal tracking-tight leading-tight text-3xl text-purple-900 lg:text-4xl"
                 >
-                <span
-                  v-formatted-text="item.content"
-                  class="leading-relaxed text-gray-600"
+                  {{ item.name }}
+                </h1>
+                <p
+                  v-if="item.description"
+                  v-formatted-text="item.description"
+                  class="text-gray-600"
                 />
-              </blockquote>
-              <footer class="flex items-center mt-6">
-                <img
-                  v-if="item.image"
-                  :src="item.image"
-                  :alt="item.author + ' - ' + item.info"
-                  class="rounded-full h-10 w-10 ml-auto shadow-lg md:h-16 md:w-16"
+              </div>
+              <ul class="text-base lg:text-lg">
+                <li
+                  v-if="item.price"
+                  v-formatted-text="item.price"
+                  class="px-8 py-4 text-3xl font-normal tracking-tight leading-tight text-purple-900 bg-gray-100"
                 />
-                <div class="ml-4 text-base">
-                  <cite v-if="item.author" class="block">{{
-                    item.author
-                  }}</cite>
-                  <cite v-if="item.info" class="block">{{ item.info }}</cite>
-                </div>
-              </footer>
+                <template v-for="(listItem, i) in item.list">
+                  <li :key="i" class="px-8 py-4" :class="listItem.classes">
+                    <span v-formatted-text="listItem.content" />
+                  </li>
+                </template>
+              </ul>
+              <div class="relative z-10 flex justify-center py-6">
+                <factorLink
+                  v-if="item.buttonLink"
+                  :path="item.buttonLink"
+                  :class="item.buttonClasses"
+                >
+                  {{ item.buttonText }}
+                  <factor-icon icon="fas fa-angle-right" />
+                </factorLink>
+              </div>
             </div>
-          </template>
-        </div>
+          </div>
+        </template>
       </div>
     </section>
 
@@ -266,7 +296,7 @@ export default {
       section5Items: setting("home.section5.items"),
       section6Pretitle: setting("home.testimonials.pretitle"),
       section6Title: setting("home.testimonials.title"),
-      section6Items: setting("home.testimonials.items"),
+      section6Description: setting("home.testimonials.description"),
     };
   },
   methods: {

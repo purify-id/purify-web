@@ -1,6 +1,12 @@
 <template>
   <factor-link path="/">
-    <img v-if="navLogo" :src="navLogo" :alt="logoAlt" class="h-8" :class="logoDisplay" />
+    <img
+      v-if="navLogo"
+      :src="navLogo"
+      :alt="logoAlt"
+      class="h-6"
+      :class="logoDisplay"
+    />
     <img
       v-if="navLogoInverse"
       :src="navLogoInverse"
@@ -11,8 +17,8 @@
   </factor-link>
 </template>
 <script lang="ts">
-import { factorLink } from "@factor/ui"
-import { setting } from "@factor/api"
+import { factorLink } from "@factor/ui";
+import { setting } from "@factor/api";
 
 export default {
   components: { factorLink },
@@ -23,17 +29,17 @@ export default {
       logoAlt: setting("home.meta.title"),
       logoDisplay: "",
       logoInverseDisplay: "",
-    }
+    };
   },
   watch: {
     $route: {
-      handler: function (this: any) {
-        this.brandClass()
+      handler: function(this: any) {
+        this.brandClass();
       },
     },
   },
   mounted() {
-    this.brandClass()
+    this.brandClass();
   },
   methods: {
     setting,
@@ -42,13 +48,13 @@ export default {
         (this.$route.path === "/" || this.$route.path === "/zeno/") &&
         setting("site.logoInverse")
       ) {
-        this.logoDisplay = "lg:hidden"
-        this.logoInverseDisplay = "hidden lg:block"
+        this.logoDisplay = "block";
+        this.logoInverseDisplay = "hidden";
       } else {
-        this.logoDisplay = "block"
-        this.logoInverseDisplay = "hidden"
+        this.logoDisplay = "block";
+        this.logoInverseDisplay = "hidden";
       }
     },
   },
-}
+};
 </script>

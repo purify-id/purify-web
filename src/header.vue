@@ -1,6 +1,9 @@
 <template>
-  <header class="justify-between md:items-center zeno-header" :class="headerClasses()">
-    <div class="relative z-40">
+  <header
+    class="justify-between md:items-center zeno-header"
+    :class="headerClasses()"
+  >
+    <div class="relative -ml-1 md:ml-0 md:pl-10 z-40">
       <site-brand
         v-if="loading === false && (navLogo || navLogoInverse)"
         class="brand block px-6 py-3"
@@ -29,7 +32,9 @@
     <div
       v-if="navConfig"
       class="popup transition-all rounded-lg bg-gray-100 absolute pt-6 md:relative md:opacity-100 md:h-auto md:bg-transparent md:pt-0"
-      :class="isOpen ? 'z-40 opacity-100 h-auto' : 'z-0 overflow-hidden h-0 opacity-0'"
+      :class="
+        isOpen ? 'z-40 opacity-100 h-auto' : 'z-0 overflow-hidden h-0 opacity-0'
+      "
     >
       <h4 class="px-8 custom-uppercase text-gray-600 md:hidden">Menu</h4>
       <nav>
@@ -37,7 +42,11 @@
           class="flex flex-wrap list-none list-inside px-6 py-3 lg:items-center"
           :class="navClass()"
         >
-          <li v-for="(item, index) in siteNav" :key="index" class="w-1/2 md:w-auto">
+          <li
+            v-for="(item, index) in siteNav"
+            :key="index"
+            class="w-1/2 md:w-auto"
+          >
             <component :is="item.component()" v-if="item.component" />
             <factor-link
               v-else
@@ -58,8 +67,8 @@
   </header>
 </template>
 <script lang="ts">
-import { factorLink, factorIcon } from "@factor/ui"
-import { setting } from "@factor/api"
+import { factorLink, factorIcon } from "@factor/ui";
+import { setting } from "@factor/api";
 
 export default {
   components: {
@@ -74,33 +83,35 @@ export default {
       navLogoInverse: setting("site.logoInverse"),
       navConfig: setting("site.nav"),
       isOpen: false,
-    }
+    };
   },
   computed: {
     siteNav(this: any) {
-      return this.navConfig.filter((item: any) => !item.condition || item.condition())
+      return this.navConfig.filter(
+        (item: any) => !item.condition || item.condition()
+      );
     },
   },
-  mounted: function () {
-    this.loading = false
+  mounted: function() {
+    this.loading = false;
   },
   methods: {
     headerClasses(this: any) {
       if (this.$route.path != "/") {
-        return "max-w-6xl mx-auto border-solid border-b border-gray-200 md:px-4"
+        return "max-w-6xl mx-auto border-solid border-b border-gray-200 md:px-4";
       } else {
-        return "w-full max-w-6xl absolute md:max-w-full"
+        return "w-full max-w-6xl absolute md:max-w-full";
       }
     },
     navClass(this: any) {
       if (this.$route.path != "/") {
-        return "md:justify-end"
+        return "md:justify-end";
       } else {
-        return "md:justify-center"
+        return "md:justify-center";
       }
     },
   },
-}
+};
 </script>
 
 <style lang="less">
@@ -122,7 +133,8 @@ export default {
     right: 10px;
     perspective: 2000px;
     box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-      0 30px 60px -30px rgba(0, 0, 0, 0.3), 0 -18px 60px -10px rgba(0, 0, 0, 0.025);
+      0 30px 60px -30px rgba(0, 0, 0, 0.3),
+      0 -18px 60px -10px rgba(0, 0, 0, 0.025);
     transform-origin: 100% 0;
     @media (min-width: 768px) {
       left: 0;
