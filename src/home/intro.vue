@@ -20,12 +20,14 @@
         </template>
       </div>
     </div>
-    <div
-      v-if="section1Figure"
-      class="home-hero-img hidden lg:block"
-      :style="`background-image: url(${section1Figure});`"
-    />
-    <div v-else class="home-hero-img hidden lg:block" />
+    <div class="flex w-full h-full items-center justify-center">
+      <img
+        v-if="section1Figure"
+        :src="section1Figure"
+        class="w-full hidden lg:block"
+      />
+      <div v-else class="home-hero-img hidden lg:block" />
+    </div>
     <div
       class="hidden lg:block absolute left-0"
       style="top:500px;transform: translateX(30px);"
