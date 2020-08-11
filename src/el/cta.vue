@@ -1,5 +1,7 @@
 <template>
-  <section class="cta relative flex items-center text-center py-16 px-8 bg-purple-800 md:py-24">
+  <section
+    class="cta relative flex items-center text-center py-16 px-8 bg-purple-800 md:py-24"
+  >
     <figure class="absolute top-0 right-0 z-20 hidden mr-32 -mt-10 lg:block">
       <img :src="ctaFigure" :alt="ctaFigureAlt" />
     </figure>
@@ -7,7 +9,9 @@
       <h1
         v-if="ctaTitle"
         class="font-normal tracking-tight text-3xl lg:text-4xl text-gray-100"
-      >{{ ctaTitle }}</h1>
+      >
+        {{ ctaTitle }}
+      </h1>
       <div
         v-if="ctaContent"
         v-formatted-text="ctaContent"
@@ -26,8 +30,8 @@
 </template>
 
 <script lang="ts">
-import { factorLink, factorIcon } from "@factor/ui"
-import { setting } from "@factor/api"
+import { factorLink, factorIcon } from "@factor/ui";
+import { setting } from "@factor/api";
 
 export default {
   components: { factorLink, factorIcon },
@@ -39,15 +43,15 @@ export default {
       ctaButtons: setting("site.cta.buttons"),
       ctaFigure: setting("site.cta.figure"),
       ctaFigureAlt: setting("site.cta.figure2"),
-    }
+    };
   },
   methods: { setting },
-}
+};
 </script>
 
 <style lang="less">
 .cta {
-  background-image: url(../img/light-pattern.svg);
+  background-image: url(../img/light-green-pattern.svg);
   background-position: 50% 50%;
   background-size: cover;
 }

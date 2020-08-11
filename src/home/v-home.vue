@@ -328,9 +328,9 @@ export default {
   }
 }
 .section-3 {
-  background-image: url(../img/light-pattern.svg);
+  background-image: url(../img/light-green-pattern.svg);
 }
 .section-4 {
-  background-image: url(../img/lighter-pattern.svg);
+  background-image: url(../img/lighter-green-pattern.svg);
 }
 </style>

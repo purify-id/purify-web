@@ -20,7 +20,9 @@
     </div>
     <div class="bg-gray-100">
       <div class="max-w-3xl mx-auto">
-        <div class="flex justify-center items-center custom-uppercase mb-0 py-4 text-gray-600">
+        <div
+          class="flex justify-center items-center custom-uppercase mb-0 py-4 text-gray-600"
+        >
           <span class="inline-block">{{ standardDate(post.date) }}</span>
           <div
             v-for="authorId in post.author"
@@ -33,7 +35,8 @@
               itemprop="author"
               itemscope
               itemtype="http://schema.org/Person"
-            >{{ getPost(authorId).displayName }}</span>
+              >{{ getPost(authorId).displayName }}</span
+            >
           </div>
         </div>
       </div>
@@ -47,9 +50,9 @@
   </div>
 </template>
 <script lang="ts">
-import { factorPostEdit } from "@factor/post"
-import { factorLink, factorAvatar } from "@factor/ui"
-import { postLink, standardDate, setting, stored } from "@factor/api"
+import { factorPostEdit } from "@factor/post";
+import { factorLink, factorAvatar } from "@factor/ui";
+import { postLink, standardDate, setting, stored } from "@factor/api";
 
 export default {
   components: { factorLink, factorAvatar, factorPostEdit },
@@ -59,30 +62,30 @@ export default {
   },
   computed: {
     post(this: any) {
-      return stored(this.postId) || {}
+      return stored(this.postId) || {};
     },
     avatar(this: any) {
-      return stored(this.post.avatar) || {}
+      return stored(this.post.avatar) || {};
     },
     avatarUrl(this: any) {
-      return this.avatar.url || ""
+      return this.avatar.url || "";
     },
     featuredImage(this: any) {
       const style = {
         backgroundImage: `url(${this.avatarUrl})`,
-      }
-      return style
+      };
+      return style;
     },
   },
   methods: {
     getPost(_id: any) {
-      return stored(_id) || {}
+      return stored(_id) || {};
     },
     postLink,
     setting,
     standardDate,
   },
-}
+};
 </script>
 <style lang="less">
 .plugin-blog {
@@ -98,7 +101,7 @@ export default {
     background-repeat: no-repeat;
 
     .header-bg {
-      background-image: url(../img/light-pattern.svg);
+      background-image: url(../img/light-green-pattern.svg);
     }
   }
 }

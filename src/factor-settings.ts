@@ -14,8 +14,8 @@ export default {
     directives: require("./tailwind.css"),
   },
   metatags: {
-    defaultTitle: "Zeno",
-    titleTemplate: "%s - Factor JS",
+    defaultTitle: "Purify",
+    titleTemplate: "%s - Utilizing Technology for Your Business",
   },
 
   /**
@@ -137,7 +137,7 @@ export default {
       ],
     },
     section3: {
-      id: "solutions",
+      id: "dummy-solution",
       items: [
         {
           _item: "plan",
@@ -194,7 +194,7 @@ export default {
       figure: (): Promise<any> => import("./el/figure-devops.vue"),
     },
     section5: {
-      id: "software-as-code",
+      id: "solutions",
       pretitle: "Solutions",
       title: "What we offer",
       titleIcon: "",
@@ -618,8 +618,8 @@ export default {
         target: "_blank",
       },
     ],
-    left: `Built with <i class="fas fa-heart"></i> and <a href='https://factor.dev/' target='_blank'>Factor</a>`,
-    right: `&copy 2020 <a href='https://www.fiction.com/' target='_blank'>Fiction, Inc.</a>`, // Empty when blank (e.g. right: '') or Dynamically added if removed/commented.
+    left: `Built with <i class="fas fa-heart"></i> using <a href='https://factor.dev/' target='_blank'>Factor</a>`,
+    right: `&copy 2020 <a href='https://purify.id/' target='_blank'>Purify Labs, Inc.</a>`, // Empty when blank (e.g. right: '') or Dynamically added if removed/commented.
     figure: require("./img/cloud-with-shadow.svg"),
     figureAlt: "Cloud",
   },

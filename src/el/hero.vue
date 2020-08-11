@@ -11,8 +11,13 @@
         v-if="headline"
         class="max-w-2xl font-normal tracking-tight leading-tight text-3xl text-gray-100 lg:text-5xl"
         :class="alignment"
-      >{{ headline }}</h1>
-      <div class="max-w-2xl mt-2 text-base text-gray-500 lg:text-xl" :class="alignment">
+      >
+        {{ headline }}
+      </h1>
+      <div
+        class="max-w-2xl mt-2 text-base text-gray-500 lg:text-xl"
+        :class="alignment"
+      >
         <slot name="hero-content" />
       </div>
     </div>
@@ -29,17 +34,17 @@ export default {
   computed: {
     alignment(this: any) {
       if (this.align == "center") {
-        return "mx-auto"
+        return "mx-auto";
       } else {
-        return ""
+        return "";
       }
     },
   },
-}
+};
 </script>
 
 <style lang="less">
 .hero {
-  background-image: url(../img/light-pattern.svg);
+  background-image: url(../img/light-green-pattern.svg) !important;
 }
 </style>
