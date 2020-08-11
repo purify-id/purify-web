@@ -1,5 +1,5 @@
 <template>
-  <section class="hero overflow-hidden bg-cover bg-center bg-purple-900 py-16">
+  <section class="hero overflow-hidden bg-cover bg-center bg-purple-800 py-16">
     <div class="px-8 mx-auto max-w-6xl">
       <div
         v-if="subheadline"

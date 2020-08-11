@@ -51,7 +51,7 @@ export default {
 
 <style lang="less">
 .cta {
-  background-image: url(../img/light-green-pattern.svg);
+  background-image: url(../img/light-green-pattern.svg) !important;
   background-position: 50% 50%;
   background-size: cover;
 }
