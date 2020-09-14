@@ -236,31 +236,43 @@ export default {
    */
   about: {
     hero: {
-      pretitle: "About Theme Zeno",
-      title: "Built with Factor CMS",
-      content: `Zeno is a minimalist theme suited for the needs of IT companies and tech startups. Zeno styles are powered by Tailwind, a low-level CSS framework.`,
+      pretitle: "About Us",
+      title: "We believe in people",
+      content: `Purify established as a technology company that focuses on providing solutions for business problems that are faster and efficient`,
     },
     valuesImage1: require("./img/about1.jpg"),
     valuesImage2: require("./img/about2.jpg"),
     valuesTitle: "A company with core values:",
     values: [
       {
-        _item: "simplicity",
-        title: "Simplicity",
+        _item: "Positivity and Optimistic Mindset",
+        title: "Positivity & Optimistic Mindset",
         content:
-          "Do more with less. Given the choice, choose minimization over maximization.",
+          "With a positive and optimistic work ethic, we treat our people as humans to achieve their greater tasks.",
       },
       {
-        _item: "karma",
-        title: "Karma",
+        _item: "Robust Community",
+        title: "Robust Community",
         content:
-          "Be as altruistic as possible. History has proven that karma works in mysterious ways.",
+          "Willingness to set aside our own self-interests to share knowledge outside our family.",
       },
       {
-        _item: "humility",
-        title: "Humility",
+        _item: "Integrity",
+        title: "Integrity",
         content:
-          "Continually assess and reassess the things you believe & actions you're taking. Never assume.",
+          "We believe in consistency on our core value, methods and measurement",
+      },
+      {
+        _item: "Modern",
+        title: "Modern",
+        content:
+          "We take advantage of latest technology to help your business more scalable and sustainable",
+      },
+      {
+        _item: "Eclat",
+        title: "Eclat",
+        content:
+          "We deliver products that drive results exceeding your expectations through continous innovation",
       },
     ],
     team: {
@@ -273,11 +285,11 @@ export default {
       members: [
         {
           _item: "member_1",
-          photo: require("./img/member1.jpg"),
+          photo: require("./img/fiosandi_member.jpg"),
           title: "Co-Founder",
-          name: "Zeno Elea 1",
+          name: "Fiosandi Rizky Novalino",
           content:
-            "custom element Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit",
+            "Family first! after that Big dreamer and creative thinker, and always believe in possibility to make people shine in their own way. Trust.",
           links: [
             {
               _item: "link_1",
@@ -301,43 +313,105 @@ export default {
         },
         {
           _item: "member_2",
-          photo: require("./img/member2.jpg"),
+          photo: require("./img/berry_member.jpg"),
           title: "Co-Founder",
-          name: "Zeno Elea",
+          name: "Berry Humaidi Fuad",
           content:
-            "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit",
+            "If you don't succeed today, don't worry. There are other ways to be useful.",
         },
         {
           _item: "member_3",
-          photo: require("./img/member3.jpg"),
-          title: "Managing Partner",
-          name: "Zeno Elea",
+          photo: require("./img/akram_member.jpg"),
+          title: "Penjaga keseimbangan alam",
+          name: "Akramurridjal Rahman B",
           content:
-            "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit",
+            "Love designing things and making it usable for human. Passionate on everything from software engineering to space exploration. Jay, Ye, and Kendrick still the biggest rapper alive. ",
+          links: [
+            {
+              _item: "link_1",
+              path: "https://www.linkedin.com/in/akramurridjal",
+              icon: "fab fa-linkedin",
+              target: "_blank",
+            },
+            {
+              _item: "link_2",
+              path: "https://github.com/xerod",
+              icon: "fab fa-github",
+              target: "_blank",
+            },
+            {
+              _item: "link_3",
+              path: "https://instagram.com/akramurridjal_",
+              icon: "fab fa-instagram",
+              target: "_blank",
+            },
+            {
+              _item: "link_4",
+              path: "https://xerod.github.io",
+              icon: "fas fa-link",
+              target: "_blank",
+            },
+          ],
         },
         {
           _item: "member_4",
-          photo: require("./img/member4.jpg"),
-          title: "Managing Partner",
-          name: "Zeno Elea",
+          photo: require("./img/zendika_member.jpg"),
+          title: "Project Manager",
+          name: "Zendika Dayongki",
           content:
-            "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit",
+            "Give and give. Don't expect anything to come back to what you wanted.",
         },
         {
           _item: "member_5",
-          photo: require("./img/member5.jpg"),
-          title: "Managing Partner",
-          name: "Zeno Elea",
+          photo: require("./img/rian_member.jpg"),
+          title: "Hardware Guy",
+          name: "Moh. Ferian Fakhrul Zain",
           content:
-            "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit",
+            "INTP, Former IT — IoT, genius without brain, 🖤 new technology, my major job is front-end but somehow working on back-end, great to see you!",
+          links: [
+            {
+              _item: "link_1",
+              path: "https://www.instagram.com/rianovski",
+              icon: "fab fa-instagram",
+              target: "_blank",
+            },
+            {
+              _item: "link_2",
+              path: "https://github.com/rianovski",
+              icon: "fab fa-github",
+              target: "_blank",
+            },
+          ],
         },
         {
           _item: "member_6",
-          photo: require("./img/member6.jpg"),
-          title: "Managing Partner",
-          name: "Zeno Elea",
-          content:
-            "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit",
+          photo: require("./img/aufa_member.jpg"),
+          title: "Fullstack Developer",
+          name: "Aufa Wibowo",
+          content: "Pengen bikin startup",
+          links: [
+            {
+              _item: "link_1",
+              path: "https://www.linktr.ee/aufawibowo",
+              icon: "fas fa-link",
+              target: "_blank",
+            },
+          ],
+        },
+        {
+          _item: "member_7",
+          photo: require("./img/faris_member.jpg"),
+          title: "Fullstack Developer",
+          name: "M. Ikram Farisi",
+          content: "Penggemar game online, ngalir aja hidup kaya air",
+          links: [
+            {
+              _item: "link_1",
+              path: "https://www.instagram.com/ikram.farisi",
+              icon: "fab fa-instagram",
+              target: "_blank",
+            },
+          ],
         },
       ],
     },
