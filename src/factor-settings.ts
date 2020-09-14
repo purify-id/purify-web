@@ -260,19 +260,19 @@ export default {
         _item: "Integrity",
         title: "Integrity",
         content:
-          "We believe in consistency on our core value, methods and measurement",
+          "We believe in consistency on our core value, methods, and measurement",
       },
       {
         _item: "Modern",
         title: "Modern",
         content:
-          "We take advantage of latest technology to help your business more scalable and sustainable",
+          "We take advantage of the latest technology to help your business more scalable and sustainable",
       },
       {
         _item: "Eclat",
         title: "Eclat",
         content:
-          "We deliver products that drive results exceeding your expectations through continous innovation",
+          "We deliver products that drive results exceeding your expectations through continuous innovation",
       },
     ],
     team: {
