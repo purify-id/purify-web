@@ -318,6 +318,14 @@ export default {
           name: "Berry Humaidi Fuad",
           content:
             "If you don't succeed today, don't worry. There are other ways to be useful.",
+          links: [
+            {
+              _item: "link_1",
+              path: "https://www.linkedin.com/in/berryfuad",
+              icon: "fab fa-linkedin",
+              target: "_blank",
+            },
+          ],
         },
         {
           _item: "member_3",
@@ -360,6 +368,14 @@ export default {
           name: "Zendika Dayongki",
           content:
             "Give and give. Don't expect anything to come back to what you wanted.",
+          links: [
+            {
+              _item: "link_1",
+              path: "https://www.linkedin.com/in/zendikads",
+              icon: "fab fa-linkedin",
+              target: "_blank",
+            },
+          ],
         },
         {
           _item: "member_5",
@@ -379,6 +395,12 @@ export default {
               _item: "link_2",
               path: "https://github.com/rianovski",
               icon: "fab fa-github",
+              target: "_blank",
+            },
+            {
+              _item: "link_3",
+              path: "https://linkedin.com/in/rianovski",
+              icon: "fab fa-linkedin",
               target: "_blank",
             },
           ],
