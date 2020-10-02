@@ -25,7 +25,7 @@
                 v-if="item.image"
                 :src="item.image"
                 :alt="item.alt"
-                class="mx-auto"
+                class="mx-auto h-10"
               />
             </factor-link>
             <div

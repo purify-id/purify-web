@@ -111,28 +111,49 @@ export default {
       figure: require("./img/brainstorming.svg"),
     },
     logos: {
-      title: "Working with the following technologies:",
+      title: "Our Technology stack",
       list: [
+        {
+          _item: "netlify",
+          link: "https://netlify.app",
+          target: "_blank",
+          image: require("./img/netlify.svg"),
+          alt: "Netlify",
+        },
+        {
+          _item: "cloudflare",
+          link: "https://cloudflare.com",
+          target: "_blank",
+          image: require("./img/cloudflare.svg"),
+          alt: "Cloudflare",
+        },
+        {
+          _item: "gridsome",
+          link: "https://gridsome.com",
+          target: "_blank",
+          image: require("./img/gridsome.svg"),
+          alt: "Gridsome",
+        },
+        {
+          _item: "apollo",
+          link: "https://apollographql.com",
+          target: "_blank",
+          image: require("./img/apollo.svg"),
+          alt: "Apollo GraphQL",
+        },
+        {
+          _item: "express",
+          link: "https://experssjs.com",
+          target: "_blank",
+          image: require("./img/express.svg"),
+          alt: "Express",
+        },
         {
           _item: "aws",
           link: "https://aws.amazon.com/",
           target: "_blank",
           image: require("./img/aws.svg"),
           alt: "Amazon Web Services",
-        },
-        {
-          _item: "google",
-          link: "https://cloud.google.com/",
-          target: "_blank",
-          image: require("./img/google-cloud-platform.svg"),
-          alt: "Google Cloud Platform",
-        },
-        {
-          _item: "digitalocean",
-          link: "https://www.digitalocean.com/",
-          target: "_blank",
-          image: require("./img/digital-ocean.svg"),
-          alt: "Digital Ocean",
         },
       ],
     },
@@ -202,17 +223,17 @@ export default {
         {
           image: require("./img/web-icon.svg"),
           title: "Web Development",
-          content: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.`,
+          content: `Wix or WordPress is a great tool, but you still need special marketing material to reach your conversion target. We provide end-to-end services from developing, generate marketing material, deploying, maintaining, and testing your sales conversion.`,
         },
         {
           image: require("./img/mobile-icon.svg"),
           title: "Mobile App Development",
-          content: `Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.`,
+          content: `A mobile app is a powerful tool to keep your customers in touch. We provide a full-stack solution for mobile apps that will meet your business needs.`,
         },
         {
           image: require("./img/stack-icon.svg"),
           title: "IT Solution",
-          content: `Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.`,
+          content: `We provide custom software that is tailor-made with your business process. We also provide ERP implementation using open-source ERP software like Odoo and ERPNext.`,
         },
       ],
       syntaxTitle: "mycode.ts",
@@ -438,7 +459,7 @@ export default {
       ],
     },
     meta: {
-      title: "About - Factor Zeno Theme",
+      title: "About - Purify Business Solution",
       description:
         "Zeno is a minimalist theme suited for the needs of IT companies and tech startups. Zeno styles are powered by Tailwind, a low-level CSS framework.",
       image: require("./img/logo-zeno.jpg"),
@@ -571,7 +592,7 @@ export default {
       ],
     },
     meta: {
-      title: "Pricing - Factor Zeno Theme",
+      title: "Pricing - Purify Business Solution",
       description:
         "A minimal, personal or portfolio theme. Ideal for entrepreneurs or individuals of multiple creative professions.",
       image: require("./img/logo-zeno.jpg"),
@@ -586,7 +607,7 @@ export default {
         "We'd love to hear about your business and find a time to discuss your needs. Fill out the form and we will be in touch shortly.",
     },
     meta: {
-      title: "Contact - Factor Zeno Theme",
+      title: "Contact - Purify Business Solution",
       description:
         "A minimal, personal or portfolio theme. Ideal for entrepreneurs or individuals of multiple creative professions.",
       image: require("./img/logo-zeno.jpg"),
